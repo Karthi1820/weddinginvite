@@ -61,12 +61,14 @@ section{text-align:center}
 /* hero */
 .hero{position:relative}
 .hero .ganesha{position:absolute;left:50%;top:11%;translate:-50% 0;box-sizing:border-box;width:clamp(42px,11vw,54px);aspect-ratio:1;height:auto;object-fit:contain;padding:6px 8px;z-index:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fffaf0 55%,#f3e6d0);border:1.5px solid var(--gold);box-shadow:0 0 0 3px rgba(255,246,232,.85),0 4px 12px rgba(60,30,10,.3)}
-.hero .title{position:absolute;left:0;right:0;top:25%;display:flex;flex-direction:column;align-items:center;gap:4px;padding-inline:14%;text-align:center}
-.hero .title::before{content:"";position:absolute;z-index:0;inset:-18% 10%;background:radial-gradient(closest-side,rgba(255,246,232,.92),rgba(255,246,232,0));}
+.hero .title{position:absolute;left:0;right:0;top:26.5%;display:flex;flex-direction:column;align-items:center;gap:9px;padding-inline:21%;text-align:center}
+.hero .title::before{content:"";position:absolute;z-index:0;inset:-12% 16%;background:radial-gradient(closest-side,rgba(255,246,232,.9) 50%,rgba(255,246,232,0))}
 .hero .title>*{position:relative}
-.hero .tamil{color:#6a4515;font-size:clamp(.7rem,3vw,.92rem)}
-.hero .names{font-family:var(--script);font-size:clamp(2.2rem,10.4vw,3.2rem);line-height:1.05;color:var(--kumkum);white-space:nowrap;margin:2px 0 0}
-.hero .date{font-style:italic;font-weight:600;font-size:clamp(.95rem,4.2vw,1.15rem);color:#6a4515;margin:0}
+.hero .tag{position:absolute;left:21%;right:21%;top:21%;text-align:center}
+.hero .tamil{color:#6a4515;font-size:clamp(.54rem,2.25vw,.7rem);line-height:1.3}
+.hero .names{font-family:var(--script);font-size:clamp(1.4rem,6.2vw,2rem);line-height:1;color:var(--kumkum);margin:0;display:flex;flex-direction:column;align-items:center;gap:9px}
+.hero .weds{display:block;font-family:inherit;font-weight:700;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:#5a3a10;margin:0;padding-left:.3em}
+.hero .date{font-style:italic;font-weight:600;font-size:clamp(1rem,4.5vw,1.25rem);color:#6a4515;margin:0}
 
 /* invitation */
 .invite{padding-block:52px 56px}
@@ -164,8 +166,8 @@ section{text-align:center}
 .doorway{position:relative;height:100%;aspect-ratio:720/1280;max-width:100%;background:url(assets/door.jpg) center/100% 100%;perspective:1500px;transform-origin:50% 52%;transition:transform 3s cubic-bezier(.5,0,.3,1) .3s}
 @media (max-aspect-ratio:720/1280){.doorway{height:auto;width:100%}}
 #gate.open .doorway{transform:scale(2.2)}
-.js .hero .title{opacity:0;transform:translateY(12px);transition:opacity 1.2s ease 3.1s,transform 1.4s cubic-bezier(.2,.7,.2,1) 3.1s}
-.opened .hero .title{opacity:1;transform:none}
+.js .hero .title,.js .hero .tag{opacity:0;transform:translateY(12px);transition:opacity 1.2s ease 3.1s,transform 1.4s cubic-bezier(.2,.7,.2,1) 3.1s}
+.opened .hero .title,.opened .hero .tag{opacity:1;transform:none}
 .hero .window img{transition-duration:3.2s}
 .beyond{position:absolute;left:19.86%;top:19.92%;width:60.42%;height:64.45%;background:radial-gradient(ellipse at 50% 60%,rgba(255,236,190,.95),rgba(255,236,190,0) 70%),url(assets/hero.jpg) center 70%/cover;clip-path:polygon(0 35%,5% 22%,15% 12%,30% 5%,50% 0,70% 5%,85% 12%,95% 22%,100% 35%,100% 100%,0 100%)}
 .leaf{position:absolute;top:19.92%;height:64.45%;background-image:url(assets/door.jpg);background-repeat:no-repeat;transition:transform 2.2s cubic-bezier(.6,0,.25,1);backface-visibility:hidden}
@@ -193,7 +195,7 @@ section{text-align:center}
 #petals{position:fixed;inset:0;pointer-events:none;z-index:55}
 @media (prefers-reduced-motion:reduce){
   .leaf,.doorway,.window img{transition-duration:.01s!important}
-  #gate,#gate::after,.js .hero .title{transition:opacity .2s!important}#openBtn .seal,#openBtn .seal::before,#openBtn .mono i{animation:none}#petals{display:none}
+  #gate,#gate::after,.js .hero .title,.js .hero .tag{transition:opacity .2s!important}#openBtn .seal,#openBtn .seal::before,#openBtn .mono i{animation:none}#petals{display:none}
   .js .rv{opacity:1;transform:none;transition:none}
 }
 
@@ -240,9 +242,9 @@ section{text-align:center}
   <section class="hero">
     <div class="window" id="heroWin"><img src="assets/hero.jpg" alt="Painting of the Tiruttani hill temple at sunrise, seen through open temple doors"></div>
     <img class="ganesha" alt="Lord Vinayagar" src="assets/ganesha.png">
+    <div class="tamil tag">இரு மனம் இணையும் ஒரு திருமணம்</div>
     <div class="title">
-      <div class="tamil">இரு மனம் இணையும் ஒரு திருமணம்</div>
-      <p class="names">Karthi &amp; Shakthi</p>
+      <p class="names">C. H. Karthi<span class="weds">Weds</span>P. V. Shakthi Devi</p>
       <p class="date">20 November 2026</p>
     </div>
   </section>
